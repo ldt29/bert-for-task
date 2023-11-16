@@ -32,10 +32,16 @@ default command:
 ```
 python classifier.py  --model_type bert  --model_name_or_path ../TinyBERT_General_4L_312D  --task_name yelp  --do_eval  --data_dir ../yelp_small  --output_dir ../bert-for-cls-default
 ```
+dev acc: 0.486  
+test acc: 0.554  
+
 best model command:  
 ```
 python classifier.py  --model_type bert  --model_name_or_path ../TinyBERT_General_4L_312D  --task_name yelp  --do_eval  --data_dir ../yelp_small  --output_dir ../bert-for-cls-finetune
 ```
+dev acc: 0.518  
+test acc: 0.57 
+  
 
 ## BertForMaskedLanguageModel
 ### train
@@ -55,8 +61,13 @@ best model command:
 ```
 python classifier_mlm.py  --model_type bert  --model_name_or_path ../TinyBERT_General_4L_312D  --task_name yelp  --do_eval  --data_dir ../yelp_small  --output_dir ../bert-for-clsmlm-finetune
 ```
+dev acc: 0.528  
+test acc: 0.576  
 
 labeled training data to 50: 
 ```
 python classifier_mlm.py  --model_type bert  --model_name_or_path ../TinyBERT_General_4L_312D  --task_name yelp  --do_eval  --data_dir ../yelp_small  --output_dir ../bert-for-50labeled-finetune 
 ```
+
+dev acc: 0.366  
+test acc: 0.398   
